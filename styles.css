@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+body{
+  background-color: rgb(94, 110, 254);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  height: 350px;
+  width: 350px;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.cards{
+  list-style: none;
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.cards .details{
+  order: 13;
+}
+.card{
+  cursor: pointer;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  margin: 10px;
+}
+
+.card.flip{
+  transform: rotateY(180deg);
+}
+
+.view{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 1px black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+.front-view img{
+  width:30px;
+}
+.front-view{
+  transform: rotateY(180deg);
+}
+
+.details{
+  display: flex;
+  width: calc(100% - 30px);
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+button{
+  cursor: pointer;
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(179, 179, 179);
+}
+
+button:hover{
+  background-color: rgb(94, 110, 254);
+  color: white;
+  transition: 0.5s;
+}
+
